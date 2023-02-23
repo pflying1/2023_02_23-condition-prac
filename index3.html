@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="root"></div>
+
+  <script>
+    let practiceColorArray = ["하늘색", "파란색", "검은색", "주황색", "빨간색"];
+    let practiceSizeArray = ["huge", "large", "normal", "small"];
+
+    //배열 합치기 concat 
+    let newArr = practiceColorArray.concat(practiceSizeArray);
+
+    console.dir(newArr);
+      //index를 0으로 초기화하고 practiceColorArray 문자열 길이, 1씩 더한다.
+    for(let index =0; index <newArr.length; index++) { 
+      //변수 newDiv를 만들고 문서.div요소를 만들어서 만들어진 newDiv에 담는다.
+      let newDiv = document.createElement("div"); 
+      //newDiv.텍스트컨텐트에 practiceColorArray[index]의 길이만큼의 문자열을 담는다.
+      newDiv.textContent = newArr[index];
+      //root의 자식에 newDiv를 이동시킨다.
+      root.appendChild(newDiv);
+
+      //만약 index가 2번배열이라면 
+      if(index === 3) {
+        //참이면 root.자식문자열.스타일.컬러는 블루
+        root.children[index].style.color = "green";
+        root.children[index].style.fontSize = "100px";
+      }else {
+        //거짓이면 root.자식문자열.스타일.폰트사이즈는 50px
+        root.children[index].style.color = "royalblue";
+        root.children[index].style.fontSize = "50px";
+      }
+    } 
+  </script>
+</body>
+</html>
