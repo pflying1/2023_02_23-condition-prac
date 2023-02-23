@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="root"></div>
+  <script>
+    let practiceColorArray = ["하늘색", "파란색", "검은색", "주황색", "빨간색"];
+    let practiceSizeArray = ["huge", "large", "normal", "small"]
+
+    let root = document.getElementById("root");
+    root.innerHTML = "<h1>" + practiceColorArray[0] + "</h1>"; //root html 안에 <h1>'practiceColorArray 0번'</h1> 입력 
+    root.textContent = practiceSizeArray[0]; //root안에 practiceSizearray 0번 텍스트 입력
+  </script>
+</body>
+</html>
