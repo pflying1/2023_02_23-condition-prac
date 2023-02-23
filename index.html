@@ -7,6 +7,36 @@
   <title>Document</title>
 </head>
 <body>
-  
+  <ul id="menu">
+    <li>items-1</li>
+    <li>items-2</li>
+    <li>items-3</li>
+    <li>items-4</li>
+    <li>items-5</li>
+  </ul>
+  <script>
+    let menu = document.getElementById('menu'); //구분하기 위해서 따옴표를 쓴다. 
+    console.dir(menu); //구조를 먼저 볼수 있다.
+    console.log(menu.children); //배열
+    console.log(menu.children[0]);
+    //검증완료
+    console.dir(menu.children[0]); //메뉴.자식0번 구조를 확인
+
+    for(let index = 0; index < menu.children.length; index++ ) {
+      //index는 0으로 index 보다 초기화 메뉴.자식.길이가 작을경우 index를 1 또는 "1"씩 증가시킨다. 
+      // if(menu.children[index].textContent === "items-3") { //만약 메뉴.자식[index].텍스트가 items-3이 맞으면 참 또는 거짓
+      if(index === 2) { //만약 index 2번이 맞으면 참 또는 거짓
+        //참 일때 구문
+        menu.children[index].style.color = "red"; //참일경우 메뉴.자식반복구문.스타일.컬러 빨강
+        
+      } else {
+        //거짓 일때 구문 
+        menu.children[index].style.color = "gray"; //거짓일 경우 메뉴.자식반복구문.스타일.컬러 회색
+
+      }
+
+
+    }
+  </script>
 </body>
 </html>
